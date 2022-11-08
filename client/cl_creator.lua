@@ -120,13 +120,13 @@ local function CreatorGarage()
                     RageUI.Separator("ID : ~b~"..v.id.."~s~ | [~b~"..v.label.."~s~]" )
                     if v.owner == nil then RageUI.Separator("Status: ~r~Non loué~s~") else RageUI.Separator("Status: ~g~Loué~s~") end
                         if v.owner ~= nil then  
-                            RageUI.Button("~p~Annoncer la mise en vente", "Vous ne pouvez pas faire d'annonce", {RightLabel = "→"}, false, {
+                            RageUI.Button("~r~→~s~ Annoncer la mise en vente", "Vous ne pouvez pas faire d'annonce", {RightLabel = "→"}, false, {
                                 onSelected = function()
                                 ESX.ShowNotification("~r~Erreur~s~~n~Cette propriété n'est pas à vous !")
                             end
                         })
                     else
-                        RageUI.Button("~p~Annoncer la mise en vente", "Vous pouvez indiquer qu'il est encore disponible !\n                (~b~Le prix sera indiqué~s~)", {RightLabel = "→"}, true, {
+                        RageUI.Button("~g~→~s~ Annoncer la mise en vente", "Vous pouvez indiquer qu'il est encore disponible !\n                (~b~Le prix sera indiqué~s~)", {RightLabel = "→"}, true, {
                             onSelected = function()
                             TriggerServerEvent("xGarage:AnnonceVente", v.id, v.label, v.price)
                         end
@@ -134,12 +134,12 @@ local function CreatorGarage()
                     end
 
                     if v.owner == nil then
-                        RageUI.Button("~r~Retirer le propriétaire", "Il n'y à aucun propriétaire.", {RightLabel = "→"}, false, {
+                        RageUI.Button("~r~→~s~ Retirer le propriétaire", "Il n'y à aucun propriétaire.", {RightLabel = "→"}, false, {
                             onSelected = function()
                             end
                         })
                     else
-                        RageUI.Button("~r~Retiré le propriétaire", "Vous pouvez retirer le propriétaire de la propriété", {RightLabel = "→"}, true, {
+                        RageUI.Button("~g~→~s~ Retiré le propriétaire", "Vous pouvez retirer le propriétaire de la propriété", {RightLabel = "→"}, true, {
                             onSelected = function()
                                 local confirm = KeyboardInput("[Retiré le propriétaire] Êtes-vous sur de vouloir faire ça ? (oui/non)", "", 3)
                                 if confirm ~= "" then
