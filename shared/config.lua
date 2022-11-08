@@ -39,7 +39,7 @@ xGarage = {
 
     },
 
-    Obj = 'esx:stgetSharedObject', -- ESX
+    Obj = 'esx:getSharedObject', -- ESX
 
     RankAcces = {"superadmin", "admin"},
     ColorMenu =  "img_red", --Couleur de la banière : img_red, img_bleu, img_vert, img_jaune, img_violet, img_gris, img_grisf, img_orange
