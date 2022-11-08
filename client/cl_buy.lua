@@ -44,7 +44,7 @@ function menuBuy(id, price, type, label, code)
                 Wait(0)
                 RageUI.IsVisible(mainMenu, function()
                     RageUI.Separator(("Adresse: ~%s~%s~s~"):format(xGarage.ColorGlobal, label))
-                    RageUI.Separator(("Price: ~g~%s$~s~"):format(price))
+                    RageUI.Separator(("Prix: ~g~%s$~s~"):format(price))
                     RageUI.Separator(("Nombre de place: ~%s~%s~s~"):format(xGarage.ColorGlobal, type))
                     RageUI.Line()
                     RageUI.Button("Visiter", nil, {RightLabel = "→"}, true, {
