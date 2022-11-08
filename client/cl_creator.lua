@@ -139,9 +139,9 @@ local function CreatorGarage()
                             end
                         })
                     else
-                        RageUI.Button("~g~→~s~ Retiré le propriétaire", "Vous pouvez retirer le propriétaire de la propriété", {RightLabel = "→"}, true, {
+                        RageUI.Button("~g~→~s~ Retirer le propriétaire", "Vous pouvez retirer le propriétaire de la propriété", {RightLabel = "→"}, true, {
                             onSelected = function()
-                                local confirm = KeyboardInput("[Retiré le propriétaire] Êtes-vous sur de vouloir faire ça ? (oui/non)", "", 3)
+                                local confirm = KeyboardInput("[Retirer le propriétaire] Êtes-vous sur de vouloir faire ça ? (oui/non)", "", 3)
                                 if confirm ~= "" then
                                     if confirm == "oui" then
                                     TriggerServerEvent("xGarage:RetirerProprio", v.id)
